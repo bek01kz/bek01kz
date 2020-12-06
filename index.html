@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>project</title>
+	 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap&libraries=&v=weekly"
+      defer 
+      ></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body onload="load()">
+
+	<div class="nav">
+		<label for="toggle">&#9776;</label>
+	</div>
+
+ 
+	<div class="head">
+		<div class="logo">
+			<img onclick="window.location.reload()" src="logo.png" height="45" width="90" >
+		</div>
+
+		<div class="icons">
+			<div class="corzin">
+				<img src="corzin.png" height="30" width="30" >
+			</div>
+			<div class="bt1">
+            	<img id="" onclick="popup()" src="voiti.png" height="30" width="30" >
+        	</div>
+		</div>
+		
+	</div>
+	
+	<input type="checkbox" name="" id="toggle">
+
+
+	<div class="header">
+		<div id="novi" onmouseover="big(this)" onmouseout="small(this)">Новинки</div>
+		<div id="odez" onmouseover="big(this)" onmouseout="small(this)">Одежда</div>
+		<div id="obuv" onmouseover="big(this)" onmouseout="small(this)">Обувь</div>
+		<div id="kost" onmouseover="big(this)" onmouseout="small(this)">Костюмы</div>
+		<div id="spec" onmouseover="big(this)" onmouseout="small(this)">Спецпредложения</div>
+		<div id="poda" onmouseover="big(this)" onmouseout="small(this)">Подарки</div>
+		<div id="dete" onmouseover="big(this)" onmouseout="small(this)">Для детей</div>
+		<div id="vdoh" onmouseover="big(this)" onmouseout="small(this)">Вдохновение</div>
+	</div>
+
+
+	<div class="rl"> 
+		<div class="left">
+			<img class="ileft" src="ileft.jpg">
+		</div>
+
+		<div class="center">
+			<div class="text">
+				<h1 id="id1">Новая коллекция</h1>
+			</div>
+			<div class="button">
+				<button class="btn btn-outline-dark ">ДЛЯ НЕГО</button>
+				<button class="btn btn-outline-dark ">ДЛЯ НЕЁ</button>
+			</div>
+		</div>
+		
+		<div class="left">
+			<img class="iright" src="iright.jpg" >
+		</div>
+	</div>
+
+
+	  <div class="popup">
+        <div class="popup-content">
+            <div class="iden">
+             	<h3 id="h21">ИДЕНТИФИКАЦИЯ</h3>
+            	<img id="close" onclick="close_popup()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/OOjs_UI_icon_close.svg/1200px-OOjs_UI_icon_close.svg.png" width="10%">
+            </div>
+            <div class="akk">
+            	<h4>У МЕНЯ УЖЕ ЕСТЬ УЧЕТНАЯ ЗАПИСЬ</h4>
+            	<input id="username" type="text" name="username" placeholder="Логин">
+            	<input type="password" id="pass" name="pass" placeholder="Пароль">
+             	<p> <ins> Забыли пароль? </ins></p>
+            	<button id="btn1" class="btn btn-dark">Войти</button>
+            </div>
+            
+            <div class="netakk">
+            	<h4 id="h21">НЕТ УЧЕТНОЙ ЗАПИСИ</h4>
+            	<p>Личная учетная запись позволит вам использовать дополнительные возможности сайта.</p>
+            	<button id="btn1" class="btn btn-dark">Создать уч запись</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="top555">
+    	<h2>ТОП-5 ПОКУПОК НЕДЕЛИ</h2>
+    </div>
+
+	<div class="top5">
+		<h2 id="id2">ТОП-5 ПОКУПОК НЕДЕЛИ</h2>
+	</div>
+
+
+
+	<div class="divtop5">
+			<div class="card">
+	  			<img class="card-img-top" src="https://static.tildacdn.com/tild6138-3238-4462-b666-653437323264/IMG_6261.JPG" alt="Card image" width="250" height="300" onmouseover="this.src='https://static.tildacdn.com/tild3139-3339-4562-a561-646366333836/IMG_6262.JPG'" onmouseout="this.src='https://static.tildacdn.com/tild6138-3238-4462-b666-653437323264/IMG_6261.JPG'" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Костюм-двойка</h4>
+	   				<p class="card-title">Летняя коллекция</p>
+				<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/a4a485fa-4b0a-422e-9809-e1637c108fdd/sportswear-womens-down-parka-bjnrhR.jpg" onmouseover="this.src='https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5,q_80/021ba37a-68cc-43ab-b587-0168c694d203/sportswear-womens-down-parka-bjnrhR.jpg'" onmouseout="this.src='https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/a4a485fa-4b0a-422e-9809-e1637c108fdd/sportswear-womens-down-parka-bjnrhR.jpg'" width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Nike Sportswear</h4>
+	   				<p class="card-title">Women's Down Parka</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/5a2a103a-efcb-4580-9c6d-1a01124098b7/heritage-rucksack-kh4t2Z.jpg" onmouseover="this.src='https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a3c4d4dd-83d7-43c4-b6c6-242a21952983/heritage-rucksack-kh4t2Z.jpg'" onmouseout="this.src='https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/5a2a103a-efcb-4580-9c6d-1a01124098b7/heritage-rucksack-kh4t2Z.jpg'" width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Nike Heritage</h4>
+	   				<p class="card-title">Rucksack</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://static.tildacdn.com/tild3564-3835-4363-b161-646630326237/IMAGE_2019-02-12_18_.jpg" onmouseover="this.src='https://static.tildacdn.com/tild3832-3931-4662-a461-383166646265/IMG_7217.jpg'" onmouseout="this.src='https://static.tildacdn.com/tild3564-3835-4363-b161-646630326237/IMAGE_2019-02-12_18_.jpg'" width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Tumar Diamond Gold</h4>
+	   				<p class="card-title">TW18DD01G</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7eeed59d-bbd7-493e-8e83-b19dd8dc033e/air-zoom-pegasus-37-betrue-shoe-GDqZXX.jpg" onmouseover="this.src='https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/10494080-fada-4da5-9994-77cb974ddd7d/air-zoom-pegasus-37-betrue-shoe-GDqZXX.jpg'" onmouseout="this.src='https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7eeed59d-bbd7-493e-8e83-b19dd8dc033e/air-zoom-pegasus-37-betrue-shoe-GDqZXX.jpg'" width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Nike Air Zoom</h4>
+	   				<p class="card-title">37 BETRUE</p>
+				<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+	</div>
+
+	<div class="gde">
+		<div>
+			<h2 id="id_gde">ГДЕ НАС НАЙТИ?</h2>
+		</div>
+		<div>
+			<img id="gde_img" src="icon.png" width="50px" height="50px">
+		</div>
+		
+	</div>
+
+	<div class="maps">
+		<div id="map"></div>
+	</div>
+	
+
+
+	<script src="script.js"></script>
+	<script>
+		function initMap() {
+      		var options={
+      		center:{ lat:43.238949, lng:76.889709},
+      		zoom:12
+      	}
+
+        var map = new google.maps.Map(document.getElementById("map"),options);
+
+        
+      	var icon={
+        	url: "icon.png",
+        	scaledSize:new google.maps.Size(50,50),
+        	origin: new google.maps.Point(0,0),
+        	anchor: new google.maps.Point(0,0)
+      	};
+      	var marker = new google.maps.Marker({
+        	position: {lat: 43.233497, lng: 76.957893},
+        	map:map,
+        	icon:icon
+      	});
+      	var marker = new google.maps.Marker({
+        	position: {lat: 43.24120380463973 , lng: 76.9373644683289},
+        	map:map,
+        	icon:icon
+      	});
+      	var marker = new google.maps.Marker({
+        	position: {lat: 43.239059612296245 , lng: 76.903325829142},
+        	map:map,
+        	icon:icon
+      	});
+
+    }
+	</script>
+
+</body>
+</html>
